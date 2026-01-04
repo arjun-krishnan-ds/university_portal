@@ -1,0 +1,13 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<section class="dashboard-section">
+    <div class="dashboard-card">
+        <h2>Welcome, {{ request.user.username }} 👋</h2>
+        <p>You have successfully logged in to the Student Dashboard.</p>
+
+        <div class="dashboard-actions">
+            <a href="{% url 'signin' %}" class="btn-b">Logout</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'core/base.html' %}
+{% block content %}
+{% for a in admissions %}
+<section class="admission-notice">
+    <div class="admission-card">
+
+        <h2 class="admission-title">
+            Admission Window Status : <a href="{% url 'register' %}" class="admission-badge">{{ a.adm_win_sts }}</a>
+
+        </h2>
+
+        <h2 class="admission-title">
+            Admission Window : {{ a.adm_win_name }}
+        </h2>
+
+        <p class="admission-desc">
+            Applications are now open for eligible candidates. Interested students
+            are encouraged to apply before the deadline.
+        </p>
+
+        <ul class="admission-info">
+            <li><strong>Application Invited from :</strong> {{ a.adm_win_start }} </li>
+            <li><strong>Eligibility :</strong> {{ a.adm_elg }}</li>
+            <li><strong>Application Deadline :</strong> {{ a.adm_win_close }}</li>
+            <li><strong>Mode :</strong> Online Application</li>
+        </ul>
+
+        <div class="admission-actions">
+            <a href="{% url 'register' %}" class="btn-c">Apply Now</a>
+            <a href="{% url 'signin' %}" class="btn-c">Student Login</a>
+            <a href="{% url 'academics' %}" class="admission-link">View Eligibility Criteria</a>
+        </div>
+
+    </div>
+
+</section>
+{% endfor %}
+
+{% endblock %}

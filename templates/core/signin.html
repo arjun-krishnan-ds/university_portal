@@ -1,0 +1,28 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<section class="dashboard-section">
+    <div class="dashboard-card premium-card">
+        <h1>Login</h1>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <!-- Render Django form fields -->
+            {{ form.non_field_errors }}
+
+            <label for="{{ form.username.id_for_label }}"></label>
+            {{ form.username }}
+
+            <label for="{{ form.password.id_for_label }}"></label>
+            {{ form.password }}
+
+            <button type="submit" class="btn-b premium-btn" href="{% url 'dashboard' %}">Login</button>
+        </form>
+        <p class="login-link">
+            Don't have an account?
+            <a href="{% url 'signup' %}">Sign Up</a>
+        </p>
+    </div>
+</section>
+
+{% endblock %}

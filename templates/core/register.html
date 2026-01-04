@@ -1,0 +1,30 @@
+{% extends "core/base.html" %} 
+{% block content %}
+  <div class="form-container">
+        <h1>Application Form</h1>
+        <form action="/submit-application/" method="POST">
+            <!-- Django CSRF token -->
+            {% csrf_token %}
+            
+            <label for="full_name">Full Name</label>
+            <input type="text" id="full_name" name="full_name" maxlength="150" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" name="phone" maxlength="20" required>
+            
+            <label for="date_of_birth">Date of Birth</label>
+            <input type="date" id="date_of_birth" name="date_of_birth" required>
+            
+            <label for="program">Program</label>
+            <input type="text" id="program" name="program" maxlength="100" required>
+            
+            <label for="country">Country</label>
+            <input type="text" id="country" name="country" maxlength="100" required>
+            
+            <button type="submit" href="{% url 'applied' %}">Submit Application</button>
+        </form>
+    </div>
+{% endblock %}

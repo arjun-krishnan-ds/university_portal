@@ -1,0 +1,84 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<section class="academics-section">
+    <h2 class="section-title">Academic Programs</h2>
+
+    <!-- UG -->
+    <div class="accordion">
+        <button class="accordion-header" onclick="toggleAccordion(this)">
+            Undergraduate Programs
+            <span class="arrow">⌄</span>
+        </button>
+        <div class="accordion-body">
+            {% for p in ug_programs %}
+                <div class="program-card">
+                    <h4>{{ p.p_name }}</h4>
+                    <p class="desc">{{ p.p_desc }}</p>
+                    <div class="meta">
+                        <span><strong>Duration:</strong> {{ p.p_dur }}</span>
+                        <span><strong>Level:</strong> {{ p.get_level_display }}</span>
+                    </div>
+                </div>
+            {% empty %}
+                <p class="empty">No undergraduate programs available.</p>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- PG -->
+    <div class="accordion">
+        <button class="accordion-header" onclick="toggleAccordion(this)">
+            Postgraduate Programs
+            <span class="arrow">⌄</span>
+        </button>
+        <div class="accordion-body">
+            {% for p in pg_programs %}
+                <div class="program-card">
+                    <h4>{{ p.p_name }}</h4>
+                    <p class="desc">{{ p.p_desc }}</p>
+                    <div class="meta">
+                        <span><strong>Duration:</strong> {{ p.p_dur }}</span>
+                        <span><strong>Level:</strong> {{ p.get_level_display }}</span>
+                    </div>
+                </div>
+            {% empty %}
+                <p class="empty">No postgraduate programs available.</p>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- PhD -->
+    <div class="accordion">
+        <button class="accordion-header" onclick="toggleAccordion(this)">
+            Doctoral Programs
+            <span class="arrow">⌄</span>
+        </button>
+        <div class="accordion-body">
+            {% for p in phd_programs %}
+                <div class="program-card">
+                    <h4>{{ p.p_name }}</h4>
+                    <p class="desc">{{ p.p_desc }}</p>
+                    <div class="meta">
+                        <span><strong>Duration:</strong> {{ p.p_dur }}</span>
+                        <span><strong>Level:</strong> {{ p.get_level_display }}</span>
+                    </div>
+                </div>
+            {% empty %}
+                <p class="empty">No doctoral programs available.</p>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<script>
+function toggleAccordion(btn) {
+    const accordion = btn.parentElement;
+
+    document.querySelectorAll(".accordion").forEach(a => {
+        if (a !== accordion) a.classList.remove("active");
+    });
+
+    accordion.classList.toggle("active");
+}
+</script>
+
+{% endblock %}

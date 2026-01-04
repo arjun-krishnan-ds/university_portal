@@ -1,0 +1,72 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<section>
+    <h2 class="section-title">About Our University</h2>
+    <p>
+        Established in 1965, Nordic International University is a globally accredited
+        institution committed to academic excellence, innovation, and sustainability.
+        Our mission is to nurture future leaders through research-driven education.
+    </p>
+    <a href="#">Read More →</a>
+</section>
+<section class="stats">
+    <h2 class="section-title">Achievements</h2>
+    <div class="cards">
+          <div class="card">
+            <h3 class="counter" data-target="15">0</h3>
+            <p>Programs Offered</p>
+        </div>
+        <div class="card">
+            <h3 class="counter" data-target="45">0</h3>
+            <p>Faculties</p>
+        </div>
+        <div class="card">
+            <h3 class="counter" data-target="1200">0</h3>
+            <p>Students Enrolled</p>
+        </div>
+        <div class="card">
+            <h3 class="counter" data-target="350">0</h3>
+            <p>Alumni Worldwide</p>
+        </div>
+        
+    
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Our Faculties</h2>
+    <div class="faculty-cards">
+        {% for f in faculty %}
+        <div class="faculty-card">
+            <div class="faculty-image">
+                <img src="{{ f.f_img.url }}" alt="A picture of {{f.f_name}}">
+            </div>
+            <div class="faculty-info">
+                <h3>{{ f.f_name }}</h3>
+                <p class="faculty-sub">{{ f.f_sub }}</p>
+                <p class="faculty-dep">{{ f.f_dep.d_name }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="contact-section">
+    <h2 class="section-title">Contact Us</h2>
+    <div class="contact-container">
+        <div class="contact-info">
+            <p><strong>Address:</strong> Nordic International University, 123 University Ave, Stockholm, Sweden</p>
+            <p><strong>Phone:</strong> +46 8 123 456 78</p>
+            <p><strong>Email:</strong> info@niu.se</p>
+            <p><strong>Office Hours:</strong> Mon-Fri, 09:00 - 17:00</p>
+        </div>
+        <div class="contact-map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1995.123456!2d18.0649!3d59.3326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d123456789%3A0xabcdef1234567890!2sNordic%20International%20University!5e0!3m2!1sen!2sse!4v1700000000000!5m2!1sen!2sse"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

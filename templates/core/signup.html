@@ -1,0 +1,24 @@
+{% extends "core/base.html" %}
+{% block content %}
+<section class="dashboard-section">
+    <div class="dashboard-card premium-card">
+        <h2>Create Your Account</h2>
+        <p class="subtitle">Login on Student Portal to access the Student Dashboard</p>
+
+        <form method="POST" class="application-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <button type="submit" class="btn-b premium-btn">
+                Create Account
+            </button>
+        </form>
+
+        <p class="login-link">
+            Already have an account?
+            <a href="{% url 'signin' %}">Sign in</a>
+        </p>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<div class="hero">
+    <div class="hero-slider">
+        <div class="slide slide1 active"></div>
+        <div class="slide slide2"></div>
+        <div class="slide slide3"></div>
+        <div class="slide slide4"></div>
+    </div>
+
+    <div class="hero-content">
+        <h2>Empowering Minds. Shaping the Future.</h2>
+        <p>World-class education in the heart of Scandinavia</p>
+
+<div class="hero-buttons">
+    <a href="{% url 'academics' %}"class="btn-primary">Explore Programs</a>
+    <a href="{% url 'signin' %}" class="btn-primary">Student Login</a>
+    <a href="{% url 'signup' %}" class="btn-primary">Sign Up</a>
+    <a href="{% url 'register' %}" class="btn-primary">Apply Now</a>
+
+</div>
+
+    </div>
+</div>
+<section class="stats">
+    <h2 class="section-title">Achievements</h2>
+    <div class="cards">
+        <div class="card">
+            <h3 class="counter" data-target="1200">0</h3>
+            <p>Students Enrolled</p>
+        </div>
+        <div class="card">
+            <h3 class="counter" data-target="350">0</h3>
+            <p>Alumni Worldwide</p>
+        </div>
+        <div class="card">
+            <h3 class="counter" data-target="21">0</h3>
+            <p>Global Rankings</p>
+        </div>
+        <div class="card">
+            <h3 class="counter" data-target="17">0</h3>
+            <p>Awards</p>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <h2 class="section-title">More</h2>
+    <div class="cards">
+        <div class="card">Student Reviews</div>
+        <div class="card">Alumni Success</div>
+        <div class="card">Gallery</div>
+        <div class="card">Events</div>
+        <div class="card">Gallery</div>
+        <div class="card">Events</div>
+        <div class="card">Certifactes</div>
+    </div>
+</section>
+{% endblock %}

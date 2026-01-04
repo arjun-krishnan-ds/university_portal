@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Nordic International University</title>
+    <link rel="stylesheet" href="{% static 'core/css/base.css' %}">
+    <script src="{% static 'core/js/base.js' %}" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="{% url 'index' %}" class="logo">
+                <img src="{% static 'core/images/logo.png' %}" alt="University Logo">
+                <h1>Nordic International University</h1>
+            </a>
+
+        </div>
+        <nav>
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'academics' %}">Academics</a>
+            <a href="{% url 'admissions' %}">Admissions</a>
+            <a href="{% url 'campuslife' %}">Campus Life</a>
+            <a href="{% url 'news' %}">News</a>
+            <a href="{% url 'signin' %}">Student Portal</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h3>Info</h3>
+                <a href="{% url 'academics' %}">Programs</a>
+                <a href="{% url 'admissions' %}">Admissions</a>
+                <a href="{% url 'about' %}">Faculties</a>
+
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <a href="{% url 'signin' %}">Sign In</a>
+                <a href="{% url 'signup' %}">Sign Up</a>
+                <a href="{% url 'register' %}">Apply Now</a>
+            </div>
+
+
+
+            <div>
+                <h3>Resources</h3>
+                <a href="#">Library</a>
+                <a href="#">Research</a>
+                <a href="#">Alumni</a>
+            </div>
+            <div>
+                <h3>Connect</h3>
+                <a href="{% url 'about' %}">Contact</a>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 Nordic International University. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+
+</html>
