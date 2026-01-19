@@ -1,30 +1,76 @@
-{% extends "core/base.html" %} 
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/css/intlTelInput.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css">
+<link rel="stylesheet" href="{% static 'core/css/register.css' %}">
+{% endblock %}
+
 {% block content %}
-  <div class="form-container">
-        <h1>Application Form</h1>
-        <form action="/submit-application/" method="POST">
-            <!-- Django CSRF token -->
-            {% csrf_token %}
-            
-            <label for="full_name">Full Name</label>
-            <input type="text" id="full_name" name="full_name" maxlength="150" required>
-            
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="phone">Phone</label>
-            <input type="text" id="phone" name="phone" maxlength="20" required>
-            
-            <label for="date_of_birth">Date of Birth</label>
-            <input type="date" id="date_of_birth" name="date_of_birth" required>
-            
-            <label for="program">Program</label>
-            <input type="text" id="program" name="program" maxlength="100" required>
-            
-            <label for="country">Country</label>
-            <input type="text" id="country" name="country" maxlength="100" required>
-            
-            <button type="submit" href="{% url 'applied' %}">Submit Application</button>
-        </form>
+<div class="container">
+    <div class="admission-wrapper">
+        <div class="card admission-card">
+            <div class="card-body p-5">
+
+                <h2 class="admission-title text-center mb-4">
+                    Nordic International University – Admission Form
+                </h2>
+
+                <form method="POST" enctype="multipart/form-data" novalidate>
+                    {% csrf_token %}
+
+                    {% if form.non_field_errors %}
+                        <div class="alert alert-danger">
+                            {{ form.non_field_errors }}
+                        </div>
+                    {% endif %}
+
+                    <!-- Render all fields except phone fields -->
+                    {% for field in form %}
+                        {% if field.name != "phone_country_code" and field.name != "local_phone_number" %}
+                        <div class="form-section">
+                            {{ field.label_tag }}
+                            {{ field }}
+                            {% if field.help_text %}
+                                <small class="text-muted">{{ field.help_text }}</small>
+                            {% endif %}
+                            {{ field.errors }}
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+
+                    <!-- Phone -->
+                    <div class="form-section phone-wrapper">
+                        <label class="form-label">Phone Number</label>
+                        <input
+                            id="phone_input"
+                            type="tel"
+                            class="form-control phone-input"
+                            placeholder="Enter 10 digit phone number"
+                            inputmode="numeric"
+                            maxlength="10"
+                            autocomplete="off"
+                        >
+                        {{ form.phone_country_code.errors }}
+                        {{ form.local_phone_number.errors }}
+                    </div>
+
+                    <button type="submit" class="btn submit-btn w-100 mt-4">
+                        Submit Application
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
     </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/js/intlTelInput.min.js"></script>
+<script src="{% static 'core/js/register.js' %}"></script>
 {% endblock %}

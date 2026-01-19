@@ -1,13 +1,19 @@
 {% extends 'core/base.html' %}
+
 {% block content %}
 <section class="dashboard-section">
-    <div class="dashboard-card">
-        <h2>Welcome, {{ request.user.username }} 👋</h2>
-        <p>You have successfully logged in to the Student Dashboard.</p>
-
-        <div class="dashboard-actions">
-            <a href="{% url 'signin' %}" class="btn-b">Logout</a>
-        </div>
+  <div class="dashboard-card premium-card">
+    <div class="dashboard-header">
+      <h2>Welcome, {{ request.user.username }} <span class="wave">👋</span></h2>
+      <p class="subtitle">You have successfully logged in to your Dashboard.</p>
     </div>
+
+    <div class="dashboard-actions">
+      <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit" class="premium-btn">Logout</button>
+      </form>
+    </div>
+  </div>
 </section>
 {% endblock %}

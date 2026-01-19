@@ -1,22 +1,30 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <title>Nordic International University</title>
+
+    <!-- Main site CSS -->
     <link rel="stylesheet" href="{% static 'core/css/base.css' %}">
-    <script src="{% static 'core/js/base.js' %}" defer></script>
+
+    <!-- intl-tel-input CSS (REQUIRED FOR FLAGS) -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.min.css">
+
+    {% block extra_css %}{% endblock %}
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <a href="{% url 'index' %}" class="logo">
+            <a href="{% url 'index' %}" class="brand-link">
                 <img src="{% static 'core/images/logo.png' %}" alt="University Logo">
-                <h1>Nordic International University</h1>
+                <span class="brand-text"><h1>Nordic International University</h1></span>
             </a>
-
         </div>
+
         <nav>
             <a href="{% url 'index' %}">Home</a>
             <a href="{% url 'about' %}">About</a>
@@ -24,9 +32,10 @@
             <a href="{% url 'admissions' %}">Admissions</a>
             <a href="{% url 'campuslife' %}">Campus Life</a>
             <a href="{% url 'news' %}">News</a>
-            <a href="{% url 'signin' %}">Student Portal</a>
+            <a href="{% url 'dashboard' %}">Dashboard</a>
         </nav>
     </header>
+
     <main>
         {% block content %}{% endblock %}
     </main>
@@ -38,17 +47,14 @@
                 <a href="{% url 'academics' %}">Programs</a>
                 <a href="{% url 'admissions' %}">Admissions</a>
                 <a href="{% url 'about' %}">Faculties</a>
-
             </div>
 
             <div>
                 <h3>Quick Links</h3>
-                <a href="{% url 'signin' %}">Sign In</a>
+                <a href="{% url 'login' %}">Sign In</a>
                 <a href="{% url 'signup' %}">Sign Up</a>
                 <a href="{% url 'register' %}">Apply Now</a>
             </div>
-
-
 
             <div>
                 <h3>Resources</h3>
@@ -56,6 +62,7 @@
                 <a href="#">Research</a>
                 <a href="#">Alumni</a>
             </div>
+
             <div>
                 <h3>Connect</h3>
                 <a href="{% url 'about' %}">Contact</a>
@@ -63,11 +70,20 @@
                 <a href="#">Instagram</a>
             </div>
         </div>
+
         <div class="footer-bottom">
-            © 2025 Nordic International University. All Rights Reserved.
+            © 2026 Nordic International University. All Rights Reserved.
         </div>
     </footer>
 
+    <!-- Base JS -->
+    <script src="{% static 'core/js/base.js' %}" defer></script>
+
+    <!-- intl-tel-input JS (REQUIRED) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"></script>
+
+    {% block extra_js %}{% endblock %}
 </body>
 
 </html>

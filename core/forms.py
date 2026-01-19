@@ -1,32 +1,49 @@
 from django import forms
-from .models import Application
+from .models import AdmissionApplication
+import phonenumbers
 
-class ApplicationForm(forms.ModelForm):
+
+def get_country_code_choices():
+    codes = set()
+    for region in phonenumbers.SUPPORTED_REGIONS:
+        code = phonenumbers.country_code_for_region(region)
+        if code:
+            codes.add((f"+{code}", f"+{code} ({region})"))
+    return sorted(codes)
+
+
+COUNTRY_CODE_CHOICES = get_country_code_choices()
+
+
+class AdmissionApplicationForm(forms.ModelForm):
+
+    phone_country_code = forms.ChoiceField(
+        choices=COUNTRY_CODE_CHOICES,
+        initial="+91",
+        widget=forms.Select(attrs={"class": "form-control"})
+    )
+
     class Meta:
-        model = Application
-        fields = [
-            "full_name",
-            "email",
-            "phone",
-            "date_of_birth",
-            "program",
-            "country",
-        ]
-        widgets = {
-            "date_of_birth": forms.DateInput(attrs={"type": "date"}),
-        }
+        model = AdmissionApplication
+        fields = "__all__"
+
+    def clean_certificates(self):
+        file = self.cleaned_data.get('certificates', False)
+        if file:
+            if not file.name.endswith('.pdf'):
+                raise forms.ValidationError("Only PDF files are allowed.")
+        return file
+
 class StudentLoginForm(forms.Form):
     username = forms.CharField(
         max_length=150,
-        widget=forms.TextInput(attrs={
-            'placeholder': 'Username',
-            'class': 'form-input'
-        })
+        widget=forms.TextInput(
+            attrs={"placeholder": "Username", "class": "form-input"}
+        ),
     )
     password = forms.CharField(
         max_length=128,
-        widget=forms.PasswordInput(attrs={
-            'placeholder': 'Password',
-            'class': 'form-input'
-        })
+        widget=forms.PasswordInput(
+            attrs={"placeholder": "Password", "class": "form-input"}
+        ),
     )

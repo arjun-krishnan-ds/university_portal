@@ -8,13 +8,15 @@ urlpatterns = [
     path('academics/', views.academics,name="academics"),
     path('admissions/', views.admissions,name="admissions"),
     path('campuslife/', views.campuslife,name="campuslife"),
-    path('news_&_announcements/', views.news,name="news"),
-    path('login/', views.student_login_view,name="signin"),
-    path("logout/", views.signup, name="signup"),
-    path("logged_in/", views.dashboard, name="dashboard"),
-    path('forgot_password/', views.reset,name="reset"),
-    path("apply_now/", views.register, name="register"),
-    path("application_status/", views.applied, name="applied"),
+    path('news/', views.news,name="news"),
+    path('login/', views.user_login_view,name="login"),
+    path('signup/', views.signup,name="signup"),
+    path("logout/", views.user_logout_view, name="logout"),
+    path("dashboard/", views.dashboard, name="dashboard"),
+    path('reset/', views.reset,name="reset"),
+    path("register/", views.register, name="register"),
+    path("applied/", views.applied, name="applied"),
+
     # Password reset flow
     path(
         "password-reset/",

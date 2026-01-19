@@ -1,0 +1,94 @@
+/* ================= GLOBAL ================= */
+html, body {
+    height: 100%;
+    margin: 0;
+    background: #f1f5f9;
+    font-family: "Segoe UI", system-ui;
+}
+
+.container {
+    background: transparent !important;
+}
+
+/* ================= CARD ================= */
+.admission-wrapper {
+    max-width: 820px;
+    margin: auto;
+    padding: 50px 0;
+}
+
+.admission-card {
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    border: none;
+    overflow: visible !important;
+}
+
+.admission-title {
+    font-weight: 600;
+    letter-spacing: .3px;
+    color: #0f172a;
+}
+
+/* ================= FORM ================= */
+.form-section {
+    margin-bottom: 22px;
+}
+
+.form-control,
+select {
+    border-radius: 10px;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    font-size: 15px;
+}
+
+.form-control:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 .2rem rgba(37,99,235,.15);
+}
+
+/* ================= BUTTON ================= */
+.submit-btn {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    border: none;
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #1e40af, #1e3a8a);
+}
+
+/* ================= PHONE FIX ================= */
+.phone-wrapper {
+    margin-bottom: 140px;
+    position: relative;
+}
+
+.iti {
+    width: 100%;
+}
+
+.iti__dropdown-content {
+    z-index: 1055;
+}
+
+/* ================= SELECT2 ================= */
+.select2-container .select2-selection--single {
+    height: 46px;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+}
+
+.select2-selection__rendered {
+    line-height: 44px !important;
+}
+
+.select2-selection__arrow {
+    height: 44px !important;
+}
