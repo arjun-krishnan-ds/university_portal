@@ -4,7 +4,7 @@ from django_countries.fields import CountryField
 from django.db.models.signals import post_save, post_delete
 from django.dispatch import receiver
 from django.utils.html import format_html
-
+from cloudinary.models import CloudinaryField
 
 class Programs(models.Model):
     LEVEL_CHOICES = [
@@ -44,7 +44,12 @@ class Departments(models.Model):
 # ===================== Faculty Model =====================
 class Faculty(models.Model):
     f_name = models.CharField("Faculty Name", max_length=200)
-    f_img = models.ImageField("Profile Image", upload_to="faculty/", blank=True, null=True)
+    f_img = CloudinaryField(
+        "Profile Image", 
+        folder="faculty",  # you can change folder to 'faculty' instead of 'products'
+        blank=True, 
+        null=True
+    )
     f_sub = models.ManyToManyField("Subjects", blank=True, verbose_name="Subjects")
     f_dep = models.ForeignKey(
         Departments, 
