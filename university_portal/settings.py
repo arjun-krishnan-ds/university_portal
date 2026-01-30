@@ -118,7 +118,6 @@ STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"  # collectstatic will copy here
 STATICFILES_DIRS = [
     BASE_DIR / "static",          # custom static folder
-    BASE_DIR / "core" / "static", # app static folder
 ]
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
