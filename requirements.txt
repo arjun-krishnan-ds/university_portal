@@ -2,6 +2,11 @@ Django>=5.0,<6.0
 gunicorn
 whitenoise
 
+Pillow
+psycopg2-binary
+python-decouple
+
+
 cloudinary
 django-cloudinary-storage
 
@@ -9,4 +14,3 @@ django-countries
 django-phonenumber-field
 phonenumbers
 
-Pillow

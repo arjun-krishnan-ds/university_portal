@@ -1,0 +1,1227 @@
+[
+    {
+        "model": "admin.logentry",
+        "pk": 1,
+        "fields": {
+            "action_time": "2026-01-03T06:20:38.506Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "1",
+            "object_repr": "Electronics",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 2,
+        "fields": {
+            "action_time": "2026-01-03T06:20:43.384Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "2",
+            "object_repr": "Mobile Phones",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 3,
+        "fields": {
+            "action_time": "2026-01-03T06:20:49.584Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "3",
+            "object_repr": "Android",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 4,
+        "fields": {
+            "action_time": "2026-01-03T06:39:39.647Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "4",
+            "object_repr": "Clothing and Fashion",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 5,
+        "fields": {
+            "action_time": "2026-01-03T06:39:42.202Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "5",
+            "object_repr": "Men's Wear",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 6,
+        "fields": {
+            "action_time": "2026-01-03T06:40:34.332Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "5",
+            "object_repr": "Men's Wear",
+            "action_flag": 3,
+            "change_message": ""
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 7,
+        "fields": {
+            "action_time": "2026-01-03T06:40:59.470Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "6",
+            "object_repr": "Men's Wear",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 8,
+        "fields": {
+            "action_time": "2026-01-03T06:41:15.023Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "7",
+            "object_repr": "T-Shirt",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 9,
+        "fields": {
+            "action_time": "2026-01-03T06:41:45.924Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "8",
+            "object_repr": "Full Sleeve Shirt",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 10,
+        "fields": {
+            "action_time": "2026-01-03T06:42:26.056Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "9",
+            "object_repr": "Formals",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 11,
+        "fields": {
+            "action_time": "2026-01-03T06:47:32.551Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "10",
+            "object_repr": "Audio Accessories",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 12,
+        "fields": {
+            "action_time": "2026-01-03T06:47:50.463Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "11",
+            "object_repr": "Headphones",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 13,
+        "fields": {
+            "action_time": "2026-01-03T06:48:46.210Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "12",
+            "object_repr": "Speaker",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 14,
+        "fields": {
+            "action_time": "2026-01-03T06:49:02.843Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "13",
+            "object_repr": "Wireless Headphones",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 15,
+        "fields": {
+            "action_time": "2026-01-03T06:49:24.421Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "12",
+            "object_repr": "Bluetooth Speaker",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 16,
+        "fields": {
+            "action_time": "2026-01-03T06:49:52.712Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "14",
+            "object_repr": "Wired Headphones",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 17,
+        "fields": {
+            "action_time": "2026-01-03T06:50:43.624Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "15",
+            "object_repr": "Laptops",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 18,
+        "fields": {
+            "action_time": "2026-01-03T06:50:54.174Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "8",
+            "object_repr": "Full Sleeve Shirts",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 19,
+        "fields": {
+            "action_time": "2026-01-03T06:51:04.712Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "7",
+            "object_repr": "T-Shirts",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 20,
+        "fields": {
+            "action_time": "2026-01-03T06:51:11.366Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "12",
+            "object_repr": "Bluetooth Speakers",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 21,
+        "fields": {
+            "action_time": "2026-01-03T06:51:47.526Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "16",
+            "object_repr": "Women's Wear",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 22,
+        "fields": {
+            "action_time": "2026-01-03T06:52:02.275Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "17",
+            "object_repr": "KId's Wear",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 23,
+        "fields": {
+            "action_time": "2026-01-03T06:52:33.470Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "18",
+            "object_repr": "GA",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 24,
+        "fields": {
+            "action_time": "2026-01-03T06:52:48.317Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "18",
+            "object_repr": "Gaming Laptops",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Parent\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 25,
+        "fields": {
+            "action_time": "2026-01-03T06:53:32.805Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "19",
+            "object_repr": "Televisons",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 26,
+        "fields": {
+            "action_time": "2026-01-03T06:53:56.039Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "20",
+            "object_repr": "Smart TVs",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 27,
+        "fields": {
+            "action_time": "2026-01-03T06:54:39.471Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "21",
+            "object_repr": "AMOLED TVs",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 28,
+        "fields": {
+            "action_time": "2026-01-04T00:04:49.373Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "22",
+            "object_repr": "ios",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 29,
+        "fields": {
+            "action_time": "2026-01-04T00:05:47.564Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "1",
+            "object_repr": "Iphone 11",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 30,
+        "fields": {
+            "action_time": "2026-01-04T00:07:15.700Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "2",
+            "object_repr": "Iphone 12",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 31,
+        "fields": {
+            "action_time": "2026-01-04T00:08:51.049Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "3",
+            "object_repr": "Iphone 13",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 32,
+        "fields": {
+            "action_time": "2026-01-04T00:10:38.329Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "4",
+            "object_repr": "Samsung Galaxy S23 Ultra",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 33,
+        "fields": {
+            "action_time": "2026-01-04T00:12:58.610Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "5",
+            "object_repr": "Samsung Galaxy S24 Ultra",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 34,
+        "fields": {
+            "action_time": "2026-01-04T00:13:11.250Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "5",
+            "object_repr": "Samsung Galaxy S24 Ultra",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 35,
+        "fields": {
+            "action_time": "2026-01-04T00:16:47.009Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "6",
+            "object_repr": "Kids Combo Wear",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 36,
+        "fields": {
+            "action_time": "2026-01-04T00:18:50.632Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "7",
+            "object_repr": "Kids Wear Combo",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 37,
+        "fields": {
+            "action_time": "2026-01-04T00:19:32.369Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "7",
+            "object_repr": "Kids Wear Combo",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 38,
+        "fields": {
+            "action_time": "2026-01-04T00:21:42.372Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "8",
+            "object_repr": "SONY Wired Headphones",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 39,
+        "fields": {
+            "action_time": "2026-01-04T00:25:12.084Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "23",
+            "object_repr": "Bluetooth Earpods",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 40,
+        "fields": {
+            "action_time": "2026-01-04T00:27:54.927Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "9",
+            "object_repr": "Nothing in ear bluetooth Ear pods",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 41,
+        "fields": {
+            "action_time": "2026-01-04T00:29:52.530Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "10",
+            "object_repr": "ASUS Rog Gaming Series ROG-7000",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 42,
+        "fields": {
+            "action_time": "2026-01-04T00:31:59.501Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "11",
+            "object_repr": "Audible Wireless Bluetooth Headphones",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 43,
+        "fields": {
+            "action_time": "2026-01-04T00:35:18.856Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "12",
+            "object_repr": "Audible Wireless Headphones",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 44,
+        "fields": {
+            "action_time": "2026-01-04T00:36:52.541Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "13",
+            "object_repr": "Audible Wired Headphones",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 45,
+        "fields": {
+            "action_time": "2026-01-04T00:39:11.046Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "14",
+            "object_repr": "Audible Bluetooth Speaker",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 46,
+        "fields": {
+            "action_time": "2026-01-04T00:39:50.905Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "24",
+            "object_repr": "Women's Kurti",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 47,
+        "fields": {
+            "action_time": "2026-01-04T00:42:36.977Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "15",
+            "object_repr": "Kurti for Women",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 48,
+        "fields": {
+            "action_time": "2026-01-04T00:45:26.396Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "16",
+            "object_repr": "SONY BRAVIA B-40 AMOLED TV",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 49,
+        "fields": {
+            "action_time": "2026-01-04T00:46:50.887Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "25",
+            "object_repr": "Men's Watches",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 50,
+        "fields": {
+            "action_time": "2026-01-04T00:48:08.013Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "17",
+            "object_repr": "TIMEX Black Series for Men",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 51,
+        "fields": {
+            "action_time": "2026-01-04T00:48:50.001Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "26",
+            "object_repr": "Women's Watches",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 52,
+        "fields": {
+            "action_time": "2026-01-04T00:49:52.987Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "27",
+            "object_repr": "Women's Watches",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 53,
+        "fields": {
+            "action_time": "2026-01-04T00:52:08.759Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "18",
+            "object_repr": "Rodeo Classic Watches for Women",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 54,
+        "fields": {
+            "action_time": "2026-01-04T00:54:08.735Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "19",
+            "object_repr": "Retro T-Shirt for Men Prime Black",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 55,
+        "fields": {
+            "action_time": "2026-01-04T00:55:33.259Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "20",
+            "object_repr": "Retro T-Shirt for Men Wonder White",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 56,
+        "fields": {
+            "action_time": "2026-01-04T00:55:37.556Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "19",
+            "object_repr": "Retro T-Shirt for Men Prime Black",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Is available\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 57,
+        "fields": {
+            "action_time": "2026-01-04T01:00:19.513Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "21",
+            "object_repr": "0Rodeo Classic Watches for Men",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 58,
+        "fields": {
+            "action_time": "2026-01-04T01:03:01.517Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "22",
+            "object_repr": "Femme Women's Wear Full Set",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 59,
+        "fields": {
+            "action_time": "2026-01-04T01:05:07.550Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "23",
+            "object_repr": "JBL Bluetooth Speaker",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 60,
+        "fields": {
+            "action_time": "2026-01-04T01:05:14.901Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "22",
+            "object_repr": "Femme Women's Wear Full Set",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Is available\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 61,
+        "fields": {
+            "action_time": "2026-01-04T01:05:27.396Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "21",
+            "object_repr": "Rodeo Classic Watches for Men",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 62,
+        "fields": {
+            "action_time": "2026-01-04T01:06:57.034Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "24",
+            "object_repr": "SONY SMART TV Android",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 63,
+        "fields": {
+            "action_time": "2026-01-04T01:08:52.965Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "25",
+            "object_repr": "SONY SMART TV",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 64,
+        "fields": {
+            "action_time": "2026-01-20T15:39:06.170Z",
+            "user": 1,
+            "content_type": 7,
+            "object_id": "17",
+            "object_repr": "Kid's Wear",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 65,
+        "fields": {
+            "action_time": "2026-01-20T15:39:20.560Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "20",
+            "object_repr": "Retro T-Shirt for Men Wonder White",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Is available\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 66,
+        "fields": {
+            "action_time": "2026-01-20T15:39:24.047Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "21",
+            "object_repr": "Rodeo Classic Watches for Men",
+            "action_flag": 2,
+            "change_message": "[]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 67,
+        "fields": {
+            "action_time": "2026-01-20T15:39:28.167Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "21",
+            "object_repr": "Rodeo Classic Watches for Men",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Is available\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 68,
+        "fields": {
+            "action_time": "2026-01-20T15:39:32.825Z",
+            "user": 1,
+            "content_type": 10,
+            "object_id": "19",
+            "object_repr": "Retro T-Shirt for Men Prime Black",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Is available\"]}}]"
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$1200000$fixkaUcPgmtJnnXthV4YfX$Uk6NXENLOHgB7chJK2G5sKNKrJ9nBYKcbyKE1iScwdE=",
+            "last_login": "2026-01-20T14:53:28.227Z",
+            "is_superuser": true,
+            "username": "store_admin",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2026-01-03T06:11:02.649Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$1200000$wubh4IxLOZwsMWrRF7PCnq$KiWigB18V7RBBNCprxgmk7ketKcFjCd0GDjKwKMV+fo=",
+            "last_login": "2026-01-25T07:19:09.989Z",
+            "is_superuser": false,
+            "username": "dustybun",
+            "first_name": "",
+            "last_name": "",
+            "email": "dustinhenderson911@gmail.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2026-01-22T08:56:36.458Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 3,
+        "fields": {
+            "password": "pbkdf2_sha256$1200000$TQEzY7wMRk8WEIWhNRfaMR$adAycGQAhC2qbTOF8yejVeWBJ1habH8TUZyJQL1J8R8=",
+            "last_login": null,
+            "is_superuser": true,
+            "username": "admin_of_store",
+            "first_name": "",
+            "last_name": "",
+            "email": "arjunkrishnan818@gmail.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2026-01-29T11:20:17.982Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "0m7pupatq1p27r0a401sfzcndddipupy",
+        "fields": {
+            "session_data": ".eJxVjDEOgzAMAP_iGSFiCBDG7n1D5Nih0FKCIFEHxN8rJBbWu9PtwLRG6PYjA0spDjZtfrWjQAcIN-aIP34-hbxpfoWcwxzX0eVnkl92y59B_PS42ttgoG2ADrwwcquMYe6lddoJIWpkbCrSLXpnRCFiqYzrjaJCI0tRakGnC2qbHjL40TT5aGNY0mLpG9IcoYNK1zUcf50hRUE:1vjuCg:mbszivnHwZa6nF7xHELNcpvp727OQaH0A7T3ia48MZQ",
+            "expire_date": "2026-02-08T07:06:34.896Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "0sfznq8jyeh1c28yuf4q9buenxqevz7n",
+        "fields": {
+            "session_data": ".eJxVjLsOgzAMAP_FcxXZEMhj7N5vQIltCm0FEoEJ8e8VEgvr3el24LSsEHeoGoh0PKBL2zp0W9GlGwUiENxYTvzV6RTySdN7NjxP6zJmcybmssW8ZtHf82pvgyGVASI4zA2x1JopMHlnUUJvlQIiKzOq87ZNYj0huSr0uddgW_YOK2lqquH4A_d_O9E:1viD6d:hmRu5jSkZcfiwn28PtTH9_SgVuNh80vjGykP2PklnqM",
+            "expire_date": "2026-02-03T14:53:19.332Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "5at5b1ccr6sctah5v2ku7gjfdgznr2id",
+        "fields": {
+            "session_data": ".eJxVjDkOwkAMAP_iGq32csAp6XlDZHsdEkAbKUeF-DuKlALamdG8oeNtHbptsbkbC7QQ4PTLhPVpdRflwfU-OZ3qOo_i9sQddnG3qdjrerR_g4GXAVrA5qxZFL1cBJXQe0IT9py4GPWWURIRpqYPLGQ5UowaiQJpCRELfL7o8zfX:1vl4ZK:FFI3W8HrluTyFCrlY6bDOEYiy2D02yFLeK43rR1gV7w",
+            "expire_date": "2026-02-11T12:22:46.571Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "5j62m4ohewihq8i03ie1qzm1r2nntnq8",
+        "fields": {
+            "session_data": "eyJjYXJ0Ijp7fX0:1vklBL:PDm2faeIKqcYOB9so2Lk1JtRH7z4ZIbetdzYKzo78WM",
+            "expire_date": "2026-02-10T15:40:43.786Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "5mo3n0x1hk1qwwlzdwg6wdyew763llyx",
+        "fields": {
+            "session_data": ".eJxVjDkOgzAQAP-yNbJ2scFHmT5vQPbuEnIIJI4K8fcIiSJpZ0azQ5e3dei2RefuKZCAoPplJfNbx1PIK4-PyfA0rvOzmDMxl13MfRL93K72bzDkZYAEHktDLFYLRabgHUrsnVJEZGVG9cG1WVwgJF_HvvQaXcvBYy2NJQsVcJ5XSDvUDSR7HF94oDvT:1vcO1d:PSQrqzLP6vXReFBK8yrG2_ghAqtG399lQBASdwGDVVA",
+            "expire_date": "2026-01-18T13:20:05.252Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "75i75553m60g8ag58bg34lu0nj0id8o6",
+        "fields": {
+            "session_data": "eyJjYXJ0Ijp7IjI1IjoxLCIyNCI6MX19:1vixPf:dbvv9wZzY7Mpk3hp1hgIBXF9mf9A_j6A1oo6Hczvqtc",
+            "expire_date": "2026-02-05T16:20:03.536Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "83hur6qu1s1m39a0x9k79hj1liduf7g7",
+        "fields": {
+            "session_data": "eyJjYXJ0Ijp7IjI1IjoxNiwiMjQiOjJ9fQ:1vl2bP:HGygiGwKk1gFXEMx585tA5cLNl1XbBHe2mN3XE1NKyU",
+            "expire_date": "2026-02-11T10:16:47.139Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "a3lgdlnla54zcho3mtcq2bgilb3i71a3",
+        "fields": {
+            "session_data": ".eJxVjDEOgzAMAP_iGUU2BJIwducNKLFNoa1AIjAh_l4hMbTr3ekO6OO-jf2ede0ngRYIil-WIr91voS84vxcDC_ztk7JXIm5bTbdIvp53O3fYIx5hBYcpppYKk0UmLyzKGGwSgGRlRnVedtEsZ6QXBmGNGiwDXuHpdQVVVAAx3WD9jjPLxg0Ors:1viFh7:ludl5HaepxzWuBjjrG2IxEmka6sbK77ZZ019EQ5qC8c",
+            "expire_date": "2026-02-03T17:39:09.634Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "bsa8wo6olx42w8kgcnoqt9lm0andf3aa",
+        "fields": {
+            "session_data": "eyJjYXJ0Ijp7fX0:1vl491:rdjpOL2vTrGklwX3lQ_OCjWQOHoynEwqc6yMoG7VwQA",
+            "expire_date": "2026-02-11T11:55:35.159Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "eajaw40p4wvjsjy5imnz11w94cwq4u2w",
+        "fields": {
+            "session_data": "eyJjYXJ0Ijp7fX0:1vkzlM:lScAnj1Odnd8DEwOO6p9AAOAetqQEZ-yFuhgewwoCTk",
+            "expire_date": "2026-02-11T07:14:52.060Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "fk0qj1ulit8jp0wf7s8xdbbupdzj1b9d",
+        "fields": {
+            "session_data": "eyJjYXJ0Ijp7IjI1IjoxfX0:1vl0K0:c63cah9CD-DvynMmyWqcEJvnDeadQDlwR1joBeFpTOc",
+            "expire_date": "2026-02-11T07:50:40.848Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "gzrbpkf9v5ohb1uce17c1b2m05936yqn",
+        "fields": {
+            "session_data": "eyJjYXJ0Ijp7IjI1Ijo3fX0:1vi8UC:Kk3go58UyEGjdbqcMkwe4XBAFLK88DwWexBm38FOpJk",
+            "expire_date": "2026-02-03T09:57:20.908Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "hnw66p0z48pn6zy0hvus02o052ptp8cq",
+        "fields": {
+            "session_data": ".eJxVjLkOgzAQBf_l1cjyGoOPMn2-AdnrJeQQSBwV4t8jJBramdHs4DSviDtMg2gqOESqQAGRjgpd2tah2xaZu3dBBOHGcuKvjKconzS-JsXTuM7vrM5EXXZRz6nI73G1t8GQlgERTueGuNSSKTB5Z3UJvRUKWrMwa3HetqlYT5qcCX3uJdiWvdOmNDXVOP7Rdz4p:1vhqYz:CPgxc4N66WlQSqlRTCNQ-btv7gocYQTQtg0YC9VHq54",
+            "expire_date": "2026-02-02T14:49:05.168Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "ho38iarzgombmdnwp35j7fhoziza1ewz",
+        "fields": {
+            "session_data": ".eJxVjMsKgzAUBf_lrkswpw0mWXbfb5D7iNW2KPhYif9eBDduZ4bZSHlaKG8ET9nvN2p4XbpmncvU9EaZQBcmrN8yHMI-PLxHp-OwTL24I3Gnnd1rtPJ7nu1l0PHcUaZiCo0-JdXWogQxBgIU9YNDRJFkHsDdJ2mT5ypArboHg4SKY93S_gcUVjx9:1vjuI9:sXUaG5RXRyxkPnRKY8YmXZhZ8oPyIA35dfY2inQMpgY",
+            "expire_date": "2026-02-08T07:12:13.565Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "hug6s57tbuyndz5kvo7742wz6vy9rqlk",
+        "fields": {
+            "session_data": ".eJxVjEsKgzAUAO_y1iUkT4NJlt33DOF9kmpbFPysxLsXwY3bmWF2EJpXSDu4DpI7HpBpW_u8LWXOg0IChBtjkm8ZT6EfGt-TkWlc54HNmZjLLuY1afk9r_Y26GnpIUFRQQkuRpGqgT0rIXoU7FryAQtHdYjYuMg1OrIeRW3jFdlbCl2F4w8XxTyC:1vjttd:ou8QKiqsuk7xmYruQxy8YDKa49b4eoQs1rO4yOPgz40",
+            "expire_date": "2026-02-08T06:46:53.416Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "hzpebckulsvjhk226bhkxt44rsioicdl",
+        "fields": {
+            "session_data": "eyJjYXJ0Ijp7IjI1IjoxfX0:1vl0JX:SWjbWZFKF6pidg5lCgN-iJD_Vbzs2rBoXIbJvMuTbHA",
+            "expire_date": "2026-02-11T07:50:11.666Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "i2tdwmwvunytclmocaqwixkcg8q43mis",
+        "fields": {
+            "session_data": "eyJjYXJ0Ijp7IjI1IjoxOSwiMjQiOjYsIjIzIjoxLCIyMiI6MywiMTgiOjIsIjE3IjoyLCIxMyI6MX19:1vi71c:O9M5FBvbwvzoyfT7OX7CpkgBhfAroLZDHS314CzpnOY",
+            "expire_date": "2026-02-03T08:23:44.144Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "iqbgcpfrvbxgkkij6jzs5lwml56y2ewh",
+        "fields": {
+            "session_data": "eyJjYXJ0Ijp7IjI1IjoyLCIyNCI6MX19:1vl1iJ:_exTkbukyKxNeq48rY1lSN7X182pcv03FlJO0msiMOU",
+            "expire_date": "2026-02-11T09:19:51.025Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "jemha7pob334nfm0j5lpdvk45kqebf3u",
+        "fields": {
+            "session_data": "eyJjYXJ0Ijp7IjI0IjoxfX0:1viFhb:R9xr5Xcl1y3_2K6VMEAcDn8nuhNPSh2G9f48dGyNYFk",
+            "expire_date": "2026-02-03T17:39:39.459Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "kdusvp27ixmlpudfjs87y7qctpjvqvqg",
+        "fields": {
+            "session_data": "eyJjYXJ0Ijp7IjI1IjozfX0:1vl19E:GP1du_1pm3IeGmAkogjFaQE4ri78c9e3l9OeC7r9mWs",
+            "expire_date": "2026-02-11T08:43:36.956Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "m4je87f389s423ujr3gin6sswv2bekn4",
+        "fields": {
+            "session_data": ".eJxVjEsKgzAUAO_y1iWYp8Eky-57BnmfWG1LAlFX4t2L4MbtzDA7CNUV4n48YKBtnYZtSXWYFSIg3BiTfFM-hX4ov4uRktc6szkTc9nFvIqm3_Nqb4OJlgkiJBUUb0MQGdWzYyVEh4J9R85j4qAWEVsbeAyWGoeiTesU2TXk-xGOP0XgO2s:1vjuPT:9U5LYmwcYt2wPZuzWY1p5vGKD2XWfeH02S_-LEEACUU",
+            "expire_date": "2026-02-08T07:19:47.177Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "naw4joew8rlhk6zm14irop7u4snd66a9",
+        "fields": {
+            "session_data": "eyJjYXJ0Ijp7IjI1IjoxfX0:1vl3ji:O3tt55R_rNZvQpzyFgqVNPHE2ckH52XHx0go8VywVBE",
+            "expire_date": "2026-02-11T11:29:26.220Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "ne0bbxgi3eokxab9ei2rf60idwd3oi5v",
+        "fields": {
+            "session_data": "eyJjYXJ0Ijp7IjI1IjoxLCIyNCI6MiwiMjMiOjF9fQ:1vl1Vh:_dZ31y4LN4ovy8LnUOKZxWuYZ19bwIuMkqonvOEp7RE",
+            "expire_date": "2026-02-11T09:06:49.892Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "njvv2s82and81ng7xpko9eqie1emjx98",
+        "fields": {
+            "session_data": ".eJxVjEsKgzAUAO_y1iWYp8Eky-57hvA-SbUtCkZX4t2L4MbtzDA7CC0rxB1sgGiPByTa1iFtNS9pVIiAcGNM8s3TKfRD03s2Mk_rMrI5E3PZal6z5t_zam-DgeoAEbIKirchiBT17FgJ0aFg35HzmDmoRcTWBi7BUuNQtGmdIruGfF_g-AMZJTyE:1vjtTr:gRUhr5QiuyFy-UeM2erUOl28Gndz5qvSXKUy0OcK4Vg",
+            "expire_date": "2026-02-08T06:20:15.991Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "pjicyi4mvb5ki0j5nv0gzle3thfzj1ux",
+        "fields": {
+            "session_data": "eyJjYXJ0Ijp7IjI0IjoxfX0:1vl00L:HoyvNnxqi8TZWdVx-9_OXs2RQtMNWZhp-uLDXTr5B7k",
+            "expire_date": "2026-02-11T07:30:21.702Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "pjs576kli8hehvlztiip791xrjsgnq4q",
+        "fields": {
+            "session_data": ".eJxVjEsKgzAUAO_y1iWYp8Eky-57BnmfWG1LAlFX4t2L4MbtzDA7CNUV4n48YKBtnYZtSXWYFSIg3BiTfFM-hX4ov4uRktc6szkTc9nFvIqm3_Nqb4OJlgkiJBUUb0MQGdWzYyVEh4J9R85j4qAWEVsbeAyWGoeiTesU2TXk-xGOP0XgO2s:1visW0:VCGFlxmNHS3aX5GpNwEEIBiQbYQz337VJlBh0h0XjAs",
+            "expire_date": "2026-02-05T11:06:16.261Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "rmrdcwwlt798p3yeev2xuojj1jea0q0x",
+        "fields": {
+            "session_data": ".eJxVjMsKgzAQAP9lzyWY1cUkx977DWEfsdoWBR8n8d-L4MXrzDA7KM8rpB2QIPnjAZm3tc_bUuY8GCRAuDFh_ZbxFPbh8T05ncZ1HsSdibvs4l6Tld_zam-DnpceEhRT1OBjVO0sCIkxIqFi2zAFLBLNI2Lto3TRc0WoVtVkKFRxaDs4_hcWPIE:1vj9Hx:IEqzSvlT-GoaLikKr3vnAJ1rzgHG7DGNBzfgca_WUkI",
+            "expire_date": "2026-02-06T05:00:53.328Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "sr0ga9yvyif8ddo20nmgp0g1s14a1h0b",
+        "fields": {
+            "session_data": "eyJjYXJ0Ijp7IjI1IjoxLCIyNCI6Mn19:1vkzpC:wg65z4v9yGwFQ1ZSScCu4J2kbyuxTDGRlswQYZUDCRY",
+            "expire_date": "2026-02-11T07:18:50.620Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "thpm0y1i5b69xpmen0hfzvm49y16ki17",
+        "fields": {
+            "session_data": ".eJxVjM0KgzAQBt9lzyWYr11Mcuy9zyCb3Vhti4I_J_Hdi-DF68wwG6lMC6WNwJSw36iRdemadS5T0xslAl1YFv2W4RD2keE9Oh2HZeqzOxJ32tm9Riu_59leBp3MHSUqptDgY1RtLWTOJgBDUT-EA0qO5gHcfcxt9FIx1Ko7GzJXEuqW9j8XwzyC:1vj099:I_me-_dG3vnIcdVv3wAIZlwhoqP4lR8pOaviBB9jqBc",
+            "expire_date": "2026-02-05T19:15:11.179Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "u5d73lqdvqwus3sdwwcyfw9spnvfstpu",
+        "fields": {
+            "session_data": "eyJjYXJ0Ijp7IjI1IjoxfX0:1visXP:C5dX_HpphsQT6f4CudrjMHkMx3taWh7StsAOwv9Uw9c",
+            "expire_date": "2026-02-05T11:07:43.566Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "vs9l2wf4qg6l60gykr9k8o7739nulwgu",
+        "fields": {
+            "session_data": "eyJjYXJ0Ijp7fX0:1vi7Z9:uQlgLuXh0U9jAdd1gRDZpTrlngW7td09mPs5N05z_1c",
+            "expire_date": "2026-02-03T08:58:23.977Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "w6ii9se0uigmptd3qxhx9r7xp71wb5v1",
+        "fields": {
+            "session_data": "eyJjYXJ0Ijp7IjIxIjoxLCIyMCI6MSwiMTMiOjF9fQ:1vixqz:8tIc-FfxeIl8-dq_oU2BlOXo4tnobGTt3H3yXV5e_dw",
+            "expire_date": "2026-02-05T16:48:17.337Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "wmskuhjydi2g9nwx8va25uxcdmu9k3yu",
+        "fields": {
+            "session_data": "eyJjYXJ0Ijp7IjI1Ijo5fX0:1vl32z:dcID-xnfJi3lCXQRVQbKrzIpdQe35_Zud5m3w7PfKKo",
+            "expire_date": "2026-02-11T10:45:17.985Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "x2o4xhgrit6kn1yluyl7abvlh6deykcn",
+        "fields": {
+            "session_data": ".eJxVjDEOgzAMAP_iuYpsCCRh7N43oMQ2DW0VJAJT1b9XSAztene6N4xx3_K4V13HWWAAgssvS5GfWg4hj1jui-GlbOuczJGY01ZzW0Rf17P9G-RYMwzgMHXE0mqiwOSdRQmTVQqIrMyozts-ivWE5JowpUmD7dk7bKRrqYXPF98FN28:1vburP:24FBsWkwjC6kDxlLn3zJELFY-BUj9SqSmbaX0hP6rrE",
+            "expire_date": "2026-01-17T06:11:35.943Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "xsp29gzohh1yq4k3rg59els0wzybt222",
+        "fields": {
+            "session_data": "eyJjYXJ0Ijp7IjI1IjoxLCIyNCI6MX19:1vivyM:zD3MMNTteyCVrSOUvtzcvl78bYvsy0WJ4adzNb06WzI",
+            "expire_date": "2026-02-05T14:47:46.929Z"
+        }
+    },
+    {
+        "model": "sessions.session",
+        "pk": "yzbli188umlkyxbfvvocsnh44awsdzdp",
+        "fields": {
+            "session_data": "eyJjYXJ0Ijp7fX0:1vkyJI:QquN-e4sEHmC0k6k55V0BZ8poXTbXVVxVhkrzy0LhoA",
+            "expire_date": "2026-02-11T05:41:48.773Z"
+        }
+    }
