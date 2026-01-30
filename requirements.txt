@@ -13,4 +13,7 @@ django-cloudinary-storage
 django-countries
 django-phonenumber-field
 phonenumbers
+pycountry==22.3.5
+
+
 
