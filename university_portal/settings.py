@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/6.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
+
 import os
 from pathlib import Path
 from django.urls import reverse_lazy
@@ -117,21 +118,17 @@ USE_TZ = True
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"  # collectstatic will copy here
 STATICFILES_DIRS = [
-    BASE_DIR / "static",          # custom static folder
+    BASE_DIR / "static",  # custom static folder
 ]
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-# --------------------------
-# MEDIA FILES (Cloudinary)
-# --------------------------
-MEDIA_URL = "/media/"
+# ==========================
+# CLOUDINARY MEDIA STORAGE
+# ==========================
+
 DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
 
-CLOUDINARY_STORAGE = {
-    "CLOUD_NAME": os.environ.get("CLOUDINARY_CLOUD_NAME"),
-    "API_KEY": os.environ.get("CLOUDINARY_API_KEY"),
-    "API_SECRET": os.environ.get("CLOUDINARY_API_SECRET"),
-}
+# Cloudinary auto-configures using CLOUDINARY_URL environment variable
 
 # --------------------------
 # AUTHENTICATION
@@ -177,4 +174,3 @@ LOGGING = {
 #    python manage.py collectstatic --noinput
 # 2. Superuser is created via env vars:
 #    DJANGO_SUPERUSER_USERNAME, DJANGO_SUPERUSER_EMAIL, DJANGO_SUPERUSER_PASSWORD
-
