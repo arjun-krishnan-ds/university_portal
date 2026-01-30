@@ -9,11 +9,9 @@ https://docs.djangoproject.com/en/6.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/6.0/ref/settings/
 """
-
 import os
 from pathlib import Path
 from django.urls import reverse_lazy
-import dj_database_url
 
 # --------------------------
 # BASE DIRECTORY
@@ -84,7 +82,7 @@ TEMPLATES = [
 WSGI_APPLICATION = "university_portal.wsgi.application"
 
 # --------------------------
-# DATABASE CONFIGURATION
+# DATABASE CONFIGURATION (SQLite only)
 # --------------------------
 DATABASES = {
     "default": {
@@ -92,12 +90,6 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
-
-DATABASE_URL = os.environ.get("DATABASE_URL")
-if DATABASE_URL:
-    DATABASES["default"] = dj_database_url.parse(
-        DATABASE_URL, conn_max_age=600, ssl_require=True
-    )
 
 # --------------------------
 # PASSWORD VALIDATION
@@ -119,18 +111,19 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 USE_TZ = True
 
-# Static
+# --------------------------
+# STATIC FILES
+# --------------------------
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"  # collectstatic will copy here
 STATICFILES_DIRS = [
-    BASE_DIR / "static",  # your custom static folder
-    BASE_DIR / "core" / "static",  # include app static too
+    BASE_DIR / "static",          # custom static folder
+    BASE_DIR / "core" / "static", # app static folder
 ]
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-
 # --------------------------
-# MEDIA FILES (Cloudinary only)
+# MEDIA FILES (Cloudinary)
 # --------------------------
 MEDIA_URL = "/media/"
 DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
@@ -149,7 +142,7 @@ LOGIN_REDIRECT_URL = "/dashboard/"
 LOGOUT_REDIRECT_URL = "/"
 
 # --------------------------
-# EMAIL (set via env in Render)
+# EMAIL CONFIGURATION
 # --------------------------
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = os.environ.get("EMAIL_HOST")
@@ -179,13 +172,10 @@ LOGGING = {
 }
 
 # --------------------------
-# NOTES:
+# NOTES
 # --------------------------
-# 1. Make sure you have static files in:
-#    - core/static/css/
-#    - core/static/js/
-#    - core/static/images/
-# 2. After deploy, always run:
+# 1. After deploy, run:
 #    python manage.py collectstatic --noinput
-# 3. The model re-registration warning comes from importing core.models more than once.
-#    It's not critical for production, but avoid dynamic imports in apps.py or wsgi.py.
+# 2. Superuser is created via env vars:
+#    DJANGO_SUPERUSER_USERNAME, DJANGO_SUPERUSER_EMAIL, DJANGO_SUPERUSER_PASSWORD
+
