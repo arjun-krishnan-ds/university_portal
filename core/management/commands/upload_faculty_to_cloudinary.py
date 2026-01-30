@@ -1,12 +1,10 @@
-# your_app/management/commands/upload_faculty_to_cloudinary.py
-
 from django.core.management.base import BaseCommand
-from core.models import Faculty  # Replace with your actual app name
+from core.models import Faculty
 from django.core.files import File
 import os
 
 class Command(BaseCommand):
-    help = "Upload existing local faculty images to Cloudinary and update DB"
+    help = "Upload local faculty images to Cloudinary and update DB"
 
     def handle(self, *args, **kwargs):
         faculties = Faculty.objects.all()
