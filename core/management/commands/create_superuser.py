@@ -8,7 +8,6 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         User = get_user_model()
 
-        # Read credentials from env vars if set
         username = os.environ.get("DJANGO_SUPERUSER_USERNAME")
         email = os.environ.get("DJANGO_SUPERUSER_EMAIL")
         password = os.environ.get("DJANGO_SUPERUSER_PASSWORD")
