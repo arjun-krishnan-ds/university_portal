@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 import os
 from pathlib import Path
 from django.urls import reverse_lazy
+import cloudinary
+
 
 # --------------------------
 # BASE DIRECTORY
@@ -125,6 +127,12 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # ==========================
 # CLOUDINARY MEDIA STORAGE
 # ==========================
+
+
+cloudinary.config(
+    cloudinary_url=os.environ.get("CLOUDINARY_URL")
+)
+
 
 DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
 
