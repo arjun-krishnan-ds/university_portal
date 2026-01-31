@@ -5,7 +5,7 @@ from django.db.models.signals import post_save, post_delete
 from django.dispatch import receiver
 from django.utils.html import format_html
 from cloudinary.models import CloudinaryField
-
+from django.utils.text import slugify
 
 class Programs(models.Model):
     LEVEL_CHOICES = [
@@ -52,16 +52,32 @@ class Subject(models.Model):
         return self.name
 
 
+def faculty_image_path(instance, filename):
+    """
+    Generates a predictable Cloudinary public_id for faculty images.
+    Example: faculty/john-doe.jpg
+    """
+    ext = filename.split(".")[-1]  # preserve original extension
+    slug = slugify(instance.f_name)  # use faculty name
+    return f"{slug}.{ext}"  # file name will be slug.extension
+
+
 class Faculty(models.Model):
     f_name = models.CharField("Faculty Name", max_length=200)
-    f_img = CloudinaryField("Profile Image", folder="faculty", blank=True, null=True)
+    f_img = CloudinaryField(
+        "Profile Image",
+        folder="faculty",
+        public_id=faculty_image_path,
+        blank=True,
+        null=True,
+    )
 
     f_sub = models.ManyToManyField(
-        Subject, blank=True, related_name="faculties", verbose_name="Subjects"
+        "Subject", blank=True, related_name="faculties", verbose_name="Subjects"
     )
 
     f_dep = models.ForeignKey(
-        Departments,
+        "Departments",
         on_delete=models.CASCADE,
         related_name="faculties",
         verbose_name="Department",

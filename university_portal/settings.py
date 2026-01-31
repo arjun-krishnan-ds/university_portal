@@ -124,21 +124,24 @@ STATICFILES_DIRS = [
 ]
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-# ==========================
-# CLOUDINARY MEDIA STORAGE
-# ==========================
-
-
-cloudinary.config(
-    cloudinary_url=os.environ.get("CLOUDINARY_URL")
-)
-
-
-DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
-
-# Cloudinary auto-configures using CLOUDINARY_URL environment variable
 
 # --------------------------
+# Cloudinary Config
+# --------------------------
+cloudinary.config(
+    cloudinary_url=os.environ.get("CLOUDINARY_URL")  # your env var on Render
+)
+
+# Cloudinary storage backend
+DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
+
+# Optional: ensure files are always uploaded to a specific folder
+CLOUDINARY_STORAGE = {
+    "FOLDER": "products",   # base folder in Cloudinary
+    "OVERWRITE": True,      # overwrite files if same public_id exists
+    "CACHE": False          # important: disables ephemeral local caching
+}
+#---------------------------
 # AUTHENTICATION
 # --------------------------
 LOGIN_URL = reverse_lazy("login")
