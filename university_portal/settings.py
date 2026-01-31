@@ -14,7 +14,7 @@ import os
 from pathlib import Path
 from django.urls import reverse_lazy
 import cloudinary
-
+import dj_database_url
 
 # --------------------------
 # BASE DIRECTORY
@@ -83,9 +83,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "university_portal.wsgi.application"
 
-# --------------------------
-# DATABASE CONFIGURATION (SQLite only)
-# --------------------------
+
+#DATABASE
+
+
+# Default to SQLite
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
@@ -93,6 +95,12 @@ DATABASES = {
     }
 }
 
+# Override with PostgreSQL if DATABASE_URL exists
+DATABASE_URL = os.environ.get("DATABASE_URL")
+if DATABASE_URL:
+    DATABASES["default"] = dj_database_url.parse(
+        DATABASE_URL, conn_max_age=600, ssl_require=True
+    )
 # --------------------------
 # PASSWORD VALIDATION
 # --------------------------
