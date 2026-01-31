@@ -7,6 +7,7 @@ from django.utils.html import format_html
 from cloudinary.models import CloudinaryField
 from django.utils.text import slugify
 
+
 class Programs(models.Model):
     LEVEL_CHOICES = [
         ("UG", "Undergraduate"),
@@ -55,11 +56,16 @@ class Subject(models.Model):
 def faculty_image_path(instance, filename):
     """
     Generates a predictable Cloudinary public_id for faculty images.
-    Example: faculty/john-doe.jpg
+    Uses f_name or fallback to avoid errors on re-upload.
     """
-    ext = filename.split(".")[-1]  # preserve original extension
-    slug = slugify(instance.f_name)  # use faculty name
-    return f"{slug}.{ext}"  # file name will be slug.extension
+    ext = filename.split(".")[-1]
+    name_slug = slugify(getattr(instance, "f_name", "faculty-image"))
+    return f"{name_slug}.{ext}"  # example: faculty/john-doe.jpg
+
+
+# -----------------------------
+# Faculty Model
+# -----------------------------
 
 
 class Faculty(models.Model):
@@ -71,11 +77,9 @@ class Faculty(models.Model):
         blank=True,
         null=True,
     )
-
     f_sub = models.ManyToManyField(
         "Subject", blank=True, related_name="faculties", verbose_name="Subjects"
     )
-
     f_dep = models.ForeignKey(
         "Departments",
         on_delete=models.CASCADE,
