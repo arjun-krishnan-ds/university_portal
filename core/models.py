@@ -6,6 +6,7 @@ from django.dispatch import receiver
 from django.utils.html import format_html
 from cloudinary.models import CloudinaryField
 
+
 class Programs(models.Model):
     LEVEL_CHOICES = [
         ("UG", "Undergraduate"),
@@ -32,6 +33,8 @@ class Departments(models.Model):
 
     def __str__(self):
         return self.d_name
+
+
 # ===================== Departments Model =====================
 class Departments(models.Model):
     d_name = models.CharField(max_length=300)
@@ -41,22 +44,33 @@ class Departments(models.Model):
     def __str__(self):
         return self.d_name
 
-# ===================== Faculty Model =====================
+
+class Subject(models.Model):
+    name = models.CharField(max_length=150, unique=True)
+
+    def __str__(self):
+        return self.name
+
+
 class Faculty(models.Model):
     f_name = models.CharField("Faculty Name", max_length=200)
-    f_img = CloudinaryField(
-        "Profile Image", 
-        folder="faculty",  # you can change folder to 'faculty' instead of 'products'
-        blank=True, 
-        null=True
+    f_img = CloudinaryField("Profile Image", folder="faculty", blank=True, null=True)
+
+    f_sub = models.ManyToManyField(
+        Subject, blank=True, related_name="faculties", verbose_name="Subjects"
     )
-    f_sub = models.ManyToManyField("Subjects", blank=True, verbose_name="Subjects")
+
     f_dep = models.ForeignKey(
-        Departments, 
-        on_delete=models.CASCADE, 
+        Departments,
+        on_delete=models.CASCADE,
         related_name="faculties",
-        verbose_name="Department"
+        verbose_name="Department",
     )
+
+    def subjects_list(self):
+        return ", ".join(self.f_sub.values_list("name", flat=True))
+
+    subjects_list.short_description = "Subjects"
 
     def __str__(self):
         return self.f_name
@@ -64,9 +78,13 @@ class Faculty(models.Model):
     # Optional: thumbnail for admin display
     def image_tag(self):
         if self.f_img:
-            return format_html('<img src="{}" style="height:50px;width:50px;"/>', self.f_img.url)
+            return format_html(
+                '<img src="{}" style="height:50px;width:50px;"/>', self.f_img.url
+            )
         return ""
-    image_tag.short_description = 'Photo'
+
+    image_tag.short_description = "Photo"
+
 
 # ===================== Signals to update d_num =====================
 @receiver([post_save, post_delete], sender=Faculty)
@@ -76,7 +94,8 @@ def update_department_faculty_count(sender, instance, **kwargs):
     """
     department = instance.f_dep
     department.d_num = department.faculties.count()
-    department.save(update_fields=['d_num'])
+    department.save(update_fields=["d_num"])
+
 
 class Subjects(models.Model):
     name = models.CharField(max_length=100)
