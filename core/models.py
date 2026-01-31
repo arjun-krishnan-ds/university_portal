@@ -66,17 +66,13 @@ def faculty_image_path(instance, filename):
 # -----------------------------
 # Faculty Model
 # -----------------------------
-
 class Faculty(models.Model):
     f_name = models.CharField("Faculty Name", max_length=200)
-
-    # Lambda ensures safe public_id generation at upload time
+    
+    # Keep simple CloudinaryField; public_id will be set in save()
     f_img = CloudinaryField(
         "Profile Image",
         folder="faculty",
-        public_id=lambda instance, filename: (
-            (slugify(getattr(instance, 'f_name', 'faculty-image'))) + "." + filename.split('.')[-1]
-        ),
         blank=True,
         null=True
     )
@@ -98,6 +94,14 @@ class Faculty(models.Model):
 
     def __str__(self):
         return self.f_name
+
+    def save(self, *args, **kwargs):
+        # Set predictable public_id for Cloudinary
+        if self.f_img:
+            ext = self.f_img.name.split('.')[-1]
+            self.f_img.public_id = f"{slugify(self.f_name)}.{ext}"
+
+        super().save(*args, **kwargs)
 
     # Optional: thumbnail for admin display
     def image_tag(self):
