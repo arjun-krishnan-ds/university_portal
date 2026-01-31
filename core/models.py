@@ -67,16 +67,20 @@ def faculty_image_path(instance, filename):
 # Faculty Model
 # -----------------------------
 
-
 class Faculty(models.Model):
     f_name = models.CharField("Faculty Name", max_length=200)
+
+    # Lambda ensures safe public_id generation at upload time
     f_img = CloudinaryField(
         "Profile Image",
         folder="faculty",
-        public_id=faculty_image_path,
+        public_id=lambda instance, filename: (
+            (slugify(getattr(instance, 'f_name', 'faculty-image'))) + "." + filename.split('.')[-1]
+        ),
         blank=True,
-        null=True,
+        null=True
     )
+
     f_sub = models.ManyToManyField(
         "Subject", blank=True, related_name="faculties", verbose_name="Subjects"
     )
