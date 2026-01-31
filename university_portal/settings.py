@@ -137,11 +137,11 @@ DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
 
 # Optional: ensure files are always uploaded to a specific folder
 CLOUDINARY_STORAGE = {
-    "FOLDER": "products",   # base folder in Cloudinary
-    "OVERWRITE": True,      # overwrite files if same public_id exists
-    "CACHE": False          # important: disables ephemeral local caching
+    "FOLDER": "products",  # base folder in Cloudinary
+    "OVERWRITE": True,  # overwrite files if same public_id exists
+    "CACHE": False,  # important: disables ephemeral local caching
 }
-#---------------------------
+# ---------------------------
 # AUTHENTICATION
 # --------------------------
 LOGIN_URL = reverse_lazy("login")
