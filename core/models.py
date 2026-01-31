@@ -53,35 +53,17 @@ class Subject(models.Model):
         return self.name
 
 
-def faculty_image_path(instance, filename):
-    """
-    Generates a predictable Cloudinary public_id for faculty images.
-    Uses f_name or fallback to avoid errors on re-upload.
-    """
-    ext = filename.split(".")[-1]
-    name_slug = slugify(getattr(instance, "f_name", "faculty-image"))
-    return f"{name_slug}.{ext}"  # example: faculty/john-doe.jpg
-
-
-# -----------------------------
-# Faculty Model
-# -----------------------------
 class Faculty(models.Model):
     f_name = models.CharField("Faculty Name", max_length=200)
-    
-    # Keep simple CloudinaryField; public_id will be set in save()
-    f_img = CloudinaryField(
-        "Profile Image",
-        folder="faculty",
-        blank=True,
-        null=True
-    )
+
+    f_img = CloudinaryField("Profile Image", folder="faculty", blank=True, null=True)
 
     f_sub = models.ManyToManyField(
-        "Subject", blank=True, related_name="faculties", verbose_name="Subjects"
+        Subject, blank=True, related_name="faculties", verbose_name="Subjects"
     )
+
     f_dep = models.ForeignKey(
-        "Departments",
+        Departments,
         on_delete=models.CASCADE,
         related_name="faculties",
         verbose_name="Department",
@@ -94,14 +76,6 @@ class Faculty(models.Model):
 
     def __str__(self):
         return self.f_name
-
-    def save(self, *args, **kwargs):
-        # Set predictable public_id for Cloudinary
-        if self.f_img:
-            ext = self.f_img.name.split('.')[-1]
-            self.f_img.public_id = f"{slugify(self.f_name)}.{ext}"
-
-        super().save(*args, **kwargs)
 
     # Optional: thumbnail for admin display
     def image_tag(self):

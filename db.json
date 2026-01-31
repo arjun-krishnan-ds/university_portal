@@ -460,7 +460,6 @@
   "pk": 1,
   "fields": {
     "f_name": "Christopher Jordan",
-    "f_img": "faculty/faculty1_2g9zVYA.avif",
     "f_dep": 1,
     "f_sub": []
   }
@@ -470,7 +469,6 @@
   "pk": 2,
   "fields": {
     "f_name": "Amy Jones",
-    "f_img": "faculty/faculty2_vlavRHz.avif",
     "f_dep": 2,
     "f_sub": []
   }
@@ -480,7 +478,6 @@
   "pk": 3,
   "fields": {
     "f_name": "Lauren Bell",
-    "f_img": "faculty/faculty2_UxSchyU.avif",
     "f_dep": 3,
     "f_sub": []
   }
@@ -490,7 +487,6 @@
   "pk": 4,
   "fields": {
     "f_name": "Liam Dawson",
-    "f_img": "faculty/faculty1_ngVAfHq.avif",
     "f_dep": 4,
     "f_sub": []
   }
@@ -500,7 +496,6 @@
   "pk": 5,
   "fields": {
     "f_name": "Benjamin Andrew Stokes",
-    "f_img": "faculty/faculty1_XhBYYGp.avif",
     "f_dep": 5,
     "f_sub": []
   }
@@ -510,7 +505,6 @@
   "pk": 6,
   "fields": {
     "f_name": "Joseph Charles Buttler",
-    "f_img": "faculty/faculty1_D2qufAS.avif",
     "f_dep": 8,
     "f_sub": []
   }
@@ -520,7 +514,6 @@
   "pk": 7,
   "fields": {
     "f_name": "Sarah Taylor",
-    "f_img": "faculty/faculty2_FT1yCOl.avif",
     "f_dep": 7,
     "f_sub": []
   }
@@ -530,7 +523,6 @@
   "pk": 8,
   "fields": {
     "f_name": "Tammy Beaumont",
-    "f_img": "faculty/faculty2_82MJaB8.avif",
     "f_dep": 6,
     "f_sub": []
   }
